@@ -4,6 +4,10 @@ import com.rtjvm.scala.oop.files.Directory
 
 class State(val root:Directory, val wd:Directory, val output: String) {
 
+  var running : Boolean = false
+  def isRunning: Boolean = running
+  def setRunning(b:Boolean) = running = b
+
   def show: Unit =
     print(State.SHELL_TOKEN)
     println(output)
