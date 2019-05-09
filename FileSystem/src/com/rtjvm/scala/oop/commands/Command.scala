@@ -19,6 +19,12 @@ object Command {
       if (tokens.length < 2) incompleteCommand(COMMAND_MKDIR)
       else new Mkdir(tokens(1))
     }
+    else if (COMMAND_LS.equals(tokens(0))) {
+      new Ls
+    } else if (COMMAND_PWD.equals(tokens(0))){
+      new Pwd
+    }
+
     else if (COMMAND_EXIT.equals(tokens(0))) new Exit()
     else  new UnknownCommand
   }

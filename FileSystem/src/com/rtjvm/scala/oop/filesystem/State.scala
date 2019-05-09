@@ -4,7 +4,7 @@ import com.rtjvm.scala.oop.files.Directory
 
 class State(val root:Directory, val wd:Directory, val output: String) {
 
-  var running : Boolean = false
+  var running : Boolean = true
   def isRunning: Boolean = running
   def setRunning(b:Boolean) = running = b
 
